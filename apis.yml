@@ -1,0 +1,34 @@
+aid: apache-flume
+name: Apache Flume
+description: >-
+  Apache Flume is a distributed, reliable, and available service for efficiently collecting, aggregating, and moving large amounts of log and event data. It provides a simple and flexible architecture based on streaming data flows.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Data Collection
+  - Log Aggregation
+  - Streaming
+  - ETL
+created: '2026-03-16'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/apache-flume/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: apache-flume:apache-flume
+    name: Apache Flume
+    description: >-
+      Flume provides a Java API for building custom sources, channels, and sinks, along with an interceptor API for data transformation and a REST API for agent monitoring and configuration.
+    humanURL: https://flume.apache.org/documentation.html
+    tags:
+      - Java
+      - Data Collection
+      - Streaming
+    properties:
+      - type: Documentation
+        url: https://flume.apache.org/documentation.html
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
