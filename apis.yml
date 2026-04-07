@@ -8,9 +8,9 @@ access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Data Collection
+  - ETL
   - Log Aggregation
   - Streaming
-  - ETL
 created: '2026-03-16'
 modified: '2026-03-16'
 url: >-
@@ -23,8 +23,8 @@ apis:
       Flume provides a Java API for building custom sources, channels, and sinks, along with an interceptor API for data transformation and a REST API for agent monitoring and configuration.
     humanURL: https://flume.apache.org/documentation.html
     tags:
-      - Java
       - Data Collection
+      - Java
       - Streaming
     properties:
       - type: Documentation
