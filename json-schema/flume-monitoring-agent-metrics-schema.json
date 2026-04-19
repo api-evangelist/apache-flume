@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-flume/refs/heads/main/json-schema/flume-monitoring-agent-metrics-schema.json",
+  "title": "AgentMetrics",
+  "description": "All component metrics for a Flume agent indexed by component type and name",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/components/schemas/ComponentMetrics"
+  }
+}

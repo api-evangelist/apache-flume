@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-flume/refs/heads/main/json-schema/flume-monitoring-component-metrics-schema.json",
+  "title": "ComponentMetrics",
+  "description": "Metrics for a specific Flume component (source, channel, or sink)",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "type": "string",
+      "description": "Component type (SOURCE, CHANNEL, or SINK)",
+      "enum": [
+        "SOURCE",
+        "CHANNEL",
+        "SINK"
+      ],
+      "example": "SOURCE"
+    },
+    "StartTime": {
+      "type": "string",
+      "description": "Component start timestamp in milliseconds since epoch",
+      "example": "1718153645993"
+    },
+    "StopTime": {
+      "type": "string",
+      "description": "Component stop timestamp (0 if running)",
+      "example": "0"
+    },
+    "EventReceivedCount": {
+      "type": "string",
+      "description": "Number of events received (sources only)",
+      "example": "1000"
+    },
+    "EventAcceptedCount": {
+      "type": "string",
+      "description": "Number of events accepted (sources only)",
+      "example": "998"
+    },
+    "AppendBatchReceivedCount": {
+      "type": "string",
+      "description": "Number of event batches received (sources only)",
+      "example": "50"
+    },
+    "AppendBatchAcceptedCount": {
+      "type": "string",
+      "description": "Number of event batches accepted (sources only)",
+      "example": "50"
+    },
+    "EventPutAttemptCount": {
+      "type": "string",
+      "description": "Number of event put attempts (channels only)",
+      "example": "998"
+    },
+    "EventPutSuccessCount": {
+      "type": "string",
+      "description": "Number of successful event puts (channels only)",
+      "example": "998"
+    },
+    "EventTakeAttemptCount": {
+      "type": "string",
+      "description": "Number of event take attempts (channels only)",
+      "example": "998"
+    },
+    "EventTakeSuccessCount": {
+      "type": "string",
+      "description": "Number of successful event takes (channels only)",
+      "example": "997"
+    },
+    "ChannelSize": {
+      "type": "string",
+      "description": "Current number of events in channel",
+      "example": "1"
+    },
+    "ChannelCapacity": {
+      "type": "string",
+      "description": "Maximum channel capacity in events",
+      "example": "1000"
+    },
+    "EventDrainAttemptCount": {
+      "type": "string",
+      "description": "Number of drain attempts (sinks only)",
+      "example": "997"
+    },
+    "EventDrainSuccessCount": {
+      "type": "string",
+      "description": "Number of successful drains (sinks only)",
+      "example": "997"
+    },
+    "ConnectionCreatedCount": {
+      "type": "string",
+      "description": "Number of connections created (sinks only)",
+      "example": "5"
+    },
+    "ConnectionClosedCount": {
+      "type": "string",
+      "description": "Number of connections closed (sinks only)",
+      "example": "4"
+    },
+    "ConnectionFailedCount": {
+      "type": "string",
+      "description": "Number of failed connections (sinks only)",
+      "example": "0"
+    }
+  }
+}

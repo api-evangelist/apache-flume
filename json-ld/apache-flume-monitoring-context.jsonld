@@ -1,0 +1,83 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "flume": "https://flume.apache.org/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ComponentMetrics": "flume:ComponentMetrics",
+    "Type": {
+      "@id": "flume:Type",
+      "@type": "xsd:string"
+    },
+    "StartTime": {
+      "@id": "flume:StartTime",
+      "@type": "xsd:string"
+    },
+    "StopTime": {
+      "@id": "flume:StopTime",
+      "@type": "xsd:string"
+    },
+    "EventReceivedCount": {
+      "@id": "flume:EventReceivedCount",
+      "@type": "xsd:string"
+    },
+    "EventAcceptedCount": {
+      "@id": "flume:EventAcceptedCount",
+      "@type": "xsd:string"
+    },
+    "AppendBatchReceivedCount": {
+      "@id": "flume:AppendBatchReceivedCount",
+      "@type": "xsd:string"
+    },
+    "AppendBatchAcceptedCount": {
+      "@id": "flume:AppendBatchAcceptedCount",
+      "@type": "xsd:string"
+    },
+    "EventPutAttemptCount": {
+      "@id": "flume:EventPutAttemptCount",
+      "@type": "xsd:string"
+    },
+    "EventPutSuccessCount": {
+      "@id": "flume:EventPutSuccessCount",
+      "@type": "xsd:string"
+    },
+    "EventTakeAttemptCount": {
+      "@id": "flume:EventTakeAttemptCount",
+      "@type": "xsd:string"
+    },
+    "EventTakeSuccessCount": {
+      "@id": "flume:EventTakeSuccessCount",
+      "@type": "xsd:string"
+    },
+    "ChannelSize": {
+      "@id": "flume:ChannelSize",
+      "@type": "xsd:string"
+    },
+    "ChannelCapacity": {
+      "@id": "flume:ChannelCapacity",
+      "@type": "xsd:string"
+    },
+    "EventDrainAttemptCount": {
+      "@id": "flume:EventDrainAttemptCount",
+      "@type": "xsd:string"
+    },
+    "EventDrainSuccessCount": {
+      "@id": "flume:EventDrainSuccessCount",
+      "@type": "xsd:string"
+    },
+    "ConnectionCreatedCount": {
+      "@id": "flume:ConnectionCreatedCount",
+      "@type": "xsd:string"
+    },
+    "ConnectionClosedCount": {
+      "@id": "flume:ConnectionClosedCount",
+      "@type": "xsd:string"
+    },
+    "ConnectionFailedCount": {
+      "@id": "flume:ConnectionFailedCount",
+      "@type": "xsd:string"
+    },
+    "AgentMetrics": "flume:AgentMetrics"
+  }
+}

@@ -1,0 +1,52 @@
+# Apache Flume Monitoring API Spectral Ruleset
+rules:
+  info-title-required:
+    description: Info title must be defined
+    severity: error
+    given: $.info
+    then:
+      field: title
+      function: truthy
+  info-version-required:
+    description: API version must be specified
+    severity: error
+    given: $.info
+    then:
+      field: version
+      function: truthy
+  operation-summary-required:
+    description: All operations must have a summary
+    severity: error
+    given: $.paths[*][get,post,put,delete,patch]
+    then:
+      field: summary
+      function: truthy
+  operation-summary-apache-flume-prefix:
+    description: Operation summaries should start with Apache Flume
+    severity: warn
+    given: $.paths[*][get,post,put,delete,patch].summary
+    then:
+      function: pattern
+      functionOptions:
+        match: "^Apache Flume"
+  operation-operationId-required:
+    description: All operations must have an operationId
+    severity: error
+    given: $.paths[*][get,post,put,delete,patch]
+    then:
+      field: operationId
+      function: truthy
+  response-description-required:
+    description: All responses must have descriptions
+    severity: warn
+    given: $.paths[*][get,post,put,delete,patch].responses[*]
+    then:
+      field: description
+      function: truthy
+  schema-description-recommended:
+    description: Schemas should have descriptions
+    severity: info
+    given: $.components.schemas[*]
+    then:
+      field: description
+      function: truthy

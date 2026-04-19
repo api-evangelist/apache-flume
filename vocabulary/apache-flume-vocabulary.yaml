@@ -1,0 +1,113 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "Apache Flume"
+  description: "Vocabulary taxonomy for Apache Flume covering agent monitoring, component metrics, sources, channels, and sinks."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - namespace: flume-monitoring
+      version: "1.11.0"
+      baseUrl: "http://localhost:41414"
+      status: active
+      description: Apache Flume Agent Monitoring REST API
+
+  resources:
+    - name: metrics
+      apis: [flume-monitoring]
+      actions: [get]
+
+  actions:
+    - name: get
+      httpMethods: [GET]
+      pattern: read
+
+  schemas:
+    core:
+      - name: AgentMetrics
+        description: All component metrics for a Flume agent
+      - name: ComponentMetrics
+        description: Metrics for a specific Flume component
+
+  parameters:
+    identifiers: []
+    filters: []
+
+  enums:
+    componentTypes:
+      - SOURCE
+      - CHANNEL
+      - SINK
+    sourceTypes:
+      - Avro
+      - Thrift
+      - Exec
+      - SpoolingDirectory
+      - Taildir
+      - Kafka
+      - HTTP
+      - Syslog
+      - NetCat
+    channelTypes:
+      - Memory
+      - File
+      - Kafka
+    sinkTypes:
+      - HDFS
+      - Avro
+      - HBase
+      - Logger
+      - Null
+
+  authentication:
+    schemes:
+      - type: None
+        description: Flume monitoring API runs within internal network
+
+capability:
+  workflows:
+    - name: Log Collection
+      file: capabilities/flume-log-collection.yaml
+      description: Monitor Flume agent metrics for log collection pipelines
+      apis: [flume-monitoring]
+      toolCount: 1
+      personas: [Data Engineer, Platform Operator]
+      domains: [Log Aggregation, Monitoring]
+
+  personas:
+    - id: data-engineer
+      name: Data Engineer
+      description: Engineers configuring and monitoring Flume log collection pipelines
+      workflows: [Log Collection]
+    - id: platform-operator
+      name: Platform Operator
+      description: Operators monitoring Flume agent health and throughput
+      workflows: [Log Collection]
+
+  domains:
+    - name: Log Aggregation
+      description: Collecting, aggregating, and moving log and event data
+    - name: Monitoring
+      description: Agent component metrics and health monitoring
+
+  namespaces:
+    - name: flume-monitoring
+      type: consumed
+    - name: flume-collection-api
+      type: rest-exposed
+      port: 8080
+    - name: flume-collection-mcp
+      type: mcp-exposed
+      port: 9090
+
+  binds:
+    - name: FLUME_AGENT_URL
+      workflows: [Log Collection]
+
+crossReference:
+  - resource: metrics
+    operations: [get-metrics]
+    workflows: [Log Collection]
+    personas: [Data Engineer, Platform Operator]

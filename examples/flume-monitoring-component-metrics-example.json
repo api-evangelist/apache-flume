@@ -1,0 +1,20 @@
+{
+  "Type": "SOURCE",
+  "StartTime": "1718153645993",
+  "StopTime": "0",
+  "EventReceivedCount": "1000",
+  "EventAcceptedCount": "998",
+  "AppendBatchReceivedCount": "50",
+  "AppendBatchAcceptedCount": "50",
+  "EventPutAttemptCount": "998",
+  "EventPutSuccessCount": "998",
+  "EventTakeAttemptCount": "998",
+  "EventTakeSuccessCount": "997",
+  "ChannelSize": "1",
+  "ChannelCapacity": "1000",
+  "EventDrainAttemptCount": "997",
+  "EventDrainSuccessCount": "997",
+  "ConnectionCreatedCount": "5",
+  "ConnectionClosedCount": "4",
+  "ConnectionFailedCount": "0"
+}

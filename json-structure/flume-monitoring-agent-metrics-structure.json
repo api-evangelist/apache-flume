@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-flume/refs/heads/main/json-structure/flume-monitoring-agent-metrics-structure.json",
+  "name": "AgentMetrics",
+  "description": "All component metrics for a Flume agent indexed by component type and name",
+  "type": "object"
+}

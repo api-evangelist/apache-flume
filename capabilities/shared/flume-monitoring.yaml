@@ -1,0 +1,65 @@
+naftiko: "1.0.0-alpha1"
+info:
+  label: "Apache Flume Monitoring API"
+  description: "REST API for monitoring Apache Flume agent metrics including source, channel, and sink statistics."
+  tags:
+    - Apache Flume
+    - Monitoring
+    - Log Aggregation
+    - Data Collection
+  created: "2026-04-19"
+  modified: "2026-04-19"
+binds:
+  - namespace: env
+    keys:
+      FLUME_AGENT_URL: FLUME_AGENT_URL
+capability:
+  consumes:
+    - type: http
+      namespace: flume-monitoring
+      baseUri: "http://localhost:41414"
+      description: "Apache Flume Agent Monitoring REST API"
+      resources:
+        - name: metrics
+          path: /metrics
+          description: Agent component metrics
+          operations:
+            - name: get-metrics
+              method: GET
+              description: Retrieve all component metrics for the running Flume agent
+              inputParameters: []
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+  exposes:
+    - type: rest
+      port: 8100
+      namespace: flume-monitoring-rest
+      resources:
+        - path: /v1/metrics
+          name: metrics
+          description: Flume agent metrics
+          operations:
+            - method: GET
+              name: get-metrics
+              description: Get Flume agent metrics
+              call: "flume-monitoring.get-metrics"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+    - type: mcp
+      port: 9100
+      namespace: flume-monitoring-mcp
+      transport: http
+      tools:
+        - name: get-flume-metrics
+          description: Get all metrics for a running Flume agent
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "flume-monitoring.get-metrics"
+          outputParameters:
+            - type: object
+              mapping: "$."

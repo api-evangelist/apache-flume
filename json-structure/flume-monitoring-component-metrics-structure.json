@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-flume/refs/heads/main/json-structure/flume-monitoring-component-metrics-structure.json",
+  "name": "ComponentMetrics",
+  "description": "Metrics for a specific Flume component (source, channel, or sink)",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "type": "string",
+      "description": "Component type (SOURCE, CHANNEL, or SINK)"
+    },
+    "StartTime": {
+      "type": "string",
+      "description": "Component start timestamp in milliseconds since epoch"
+    },
+    "StopTime": {
+      "type": "string",
+      "description": "Component stop timestamp (0 if running)"
+    },
+    "EventReceivedCount": {
+      "type": "string",
+      "description": "Number of events received (sources only)"
+    },
+    "EventAcceptedCount": {
+      "type": "string",
+      "description": "Number of events accepted (sources only)"
+    },
+    "AppendBatchReceivedCount": {
+      "type": "string",
+      "description": "Number of event batches received (sources only)"
+    },
+    "AppendBatchAcceptedCount": {
+      "type": "string",
+      "description": "Number of event batches accepted (sources only)"
+    },
+    "EventPutAttemptCount": {
+      "type": "string",
+      "description": "Number of event put attempts (channels only)"
+    },
+    "EventPutSuccessCount": {
+      "type": "string",
+      "description": "Number of successful event puts (channels only)"
+    },
+    "EventTakeAttemptCount": {
+      "type": "string",
+      "description": "Number of event take attempts (channels only)"
+    },
+    "EventTakeSuccessCount": {
+      "type": "string",
+      "description": "Number of successful event takes (channels only)"
+    },
+    "ChannelSize": {
+      "type": "string",
+      "description": "Current number of events in channel"
+    },
+    "ChannelCapacity": {
+      "type": "string",
+      "description": "Maximum channel capacity in events"
+    },
+    "EventDrainAttemptCount": {
+      "type": "string",
+      "description": "Number of drain attempts (sinks only)"
+    },
+    "EventDrainSuccessCount": {
+      "type": "string",
+      "description": "Number of successful drains (sinks only)"
+    },
+    "ConnectionCreatedCount": {
+      "type": "string",
+      "description": "Number of connections created (sinks only)"
+    },
+    "ConnectionClosedCount": {
+      "type": "string",
+      "description": "Number of connections closed (sinks only)"
+    },
+    "ConnectionFailedCount": {
+      "type": "string",
+      "description": "Number of failed connections (sinks only)"
+    }
+  }
+}
