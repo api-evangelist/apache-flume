@@ -36,7 +36,7 @@ apis:
         url: openapi/apache-flume-monitoring-openapi.yml
       - type: JSONSchema
         url: json-schema/flume-monitoring-agent-metrics-schema.json
-      - type: JSON-LD
+      - type: JSONLD
         url: json-ld/apache-flume-monitoring-context.jsonld
 
   - aid: apache-flume:apache-flume-java-api
