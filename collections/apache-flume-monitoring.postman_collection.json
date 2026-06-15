@@ -1,0 +1,102 @@
+{
+  "item": [
+    {
+      "id": "4c75b92e-1c94-436d-a0e6-5d39bcbe37fd",
+      "name": "Monitoring",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "19ebf86b-462b-4251-b801-6a0c073f3137",
+          "name": "Apache Flume Get Agent Metrics",
+          "request": {
+            "name": "Apache Flume Get Agent Metrics",
+            "description": {
+              "content": "Retrieve all component metrics for the running Flume agent including source, channel, and sink statistics.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "metrics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3c4a5305-5778-4dac-beee-a36a752ad872",
+              "name": "Component metrics retrieved successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"SOURCE.avro-source\": {\n    \"EventReceivedCount\": \"1000\",\n    \"EventAcceptedCount\": \"998\",\n    \"AppendBatchAcceptedCount\": \"50\",\n    \"AppendBatchReceivedCount\": \"50\",\n    \"Type\": \"SOURCE\",\n    \"StartTime\": \"1718153645993\",\n    \"StopTime\": \"0\"\n  },\n  \"CHANNEL.memory-channel\": {\n    \"EventPutAttemptCount\": \"998\",\n    \"EventPutSuccessCount\": \"998\",\n    \"EventTakeAttemptCount\": \"998\",\n    \"EventTakeSuccessCount\": \"997\",\n    \"ChannelSize\": \"1\",\n    \"ChannelCapacity\": \"1000\",\n    \"Type\": \"CHANNEL\"\n  },\n  \"SINK.hdfs-sink\": {\n    \"EventDrainAttemptCount\": \"997\",\n    \"EventDrainSuccessCount\": \"997\",\n    \"ConnectionCreatedCount\": \"5\",\n    \"ConnectionClosedCount\": \"4\",\n    \"Type\": \"SINK\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:41414",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f79b9dfc-98b1-4ebc-b34c-ef9198190faf",
+    "name": "Apache Flume Monitoring API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for monitoring Apache Flume agents, retrieving component metrics, and accessing agent health information.\n\nContact Support:\n Email: user@flume.apache.org",
+      "type": "text/plain"
+    }
+  }
+}

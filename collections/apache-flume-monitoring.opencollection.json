@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Flume Monitoring API",
+    "version": "1.11.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Monitoring",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache Flume Get Agent Metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:41414/metrics"
+          },
+          "docs": "Retrieve all component metrics for the running Flume agent including source, channel, and sink statistics."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
