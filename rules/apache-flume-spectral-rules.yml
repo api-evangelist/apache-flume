@@ -1,4 +1,14 @@
-# Apache Flume Monitoring API Spectral Ruleset
+# apache-flume — Spectral ruleset (strengthened)
+# Plain Spectral. Existing hand-authored rules preserved; measured rules added
+# from this provider's own OpenAPI conventions by strengthen_ruleset.py,
+# then self-validated against the spec.
+#
+# Provenance:
+#   - schema-properties-casing: pascal @ 100% (n=18)
+#   - merge: kept 7 existing, added 2 measured, upgraded 0
+#   - added: schema-properties-casing, no-empty-descriptions
+extends:
+  - spectral:oas
 rules:
   info-title-required:
     description: Info title must be defined
@@ -28,7 +38,7 @@ rules:
     then:
       function: pattern
       functionOptions:
-        match: "^Apache Flume"
+        match: ^Apache Flume
   operation-operationId-required:
     description: All operations must have an operationId
     severity: error
@@ -49,4 +59,19 @@ rules:
     given: $.components.schemas[*]
     then:
       field: description
+      function: truthy
+  schema-properties-casing:
+    description: Schema properties should be PascalCase (the dominant convention in this API).
+    severity: warn
+    given: $.components.schemas[*].properties
+    then:
+      field: '@key'
+      function: casing
+      functionOptions:
+        type: pascal
+  no-empty-descriptions:
+    description: Descriptions must not be empty strings.
+    severity: warn
+    given: $..description
+    then:
       function: truthy
