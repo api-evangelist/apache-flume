@@ -57,6 +57,8 @@ apis:
         url: https://search.maven.org/artifact/org.apache.flume/flume-ng-core
         title: Java SDK (Maven Central)
 common:
+  - type: AgenticAccess
+    url: agentic-access/apache-flume-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/apache-flume-vulnerability-disclosure.yml
   - type: DomainSecurity
