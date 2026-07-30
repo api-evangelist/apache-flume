@@ -5,9 +5,21 @@ description: >-
   large amounts of log and event data. It provides a simple and flexible architecture based on streaming data flows with
   pluggable sources, channels, and sinks, plus a REST monitoring API for agent metrics.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-flume.png
 tags:
   - Apache
   - Data Collection
@@ -20,42 +32,38 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-flume/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: apache-flume:apache-flume-monitoring-api
-    name: Apache Flume Monitoring API
-    description: >-
-      REST API for monitoring Apache Flume agents, retrieving component metrics for sources, channels, and sinks, and
-      accessing agent health information.
-    humanURL: https://flume.apache.org/FlumeUserGuide.html
-    baseURL: http://localhost:41414
-    tags:
-      - Monitoring
-      - Metrics
-      - REST API
-    properties:
-      - type: Documentation
-        url: https://flume.apache.org/FlumeUserGuide.html
-      - type: OpenAPI
-        url: openapi/apache-flume-monitoring-openapi.yml
-      - type: JSONSchema
-        url: json-schema/flume-monitoring-agent-metrics-schema.json
-      - type: JSONLD
-        url: json-ld/apache-flume-monitoring-context.jsonld
-  - aid: apache-flume:apache-flume-java-api
-    name: Apache Flume Java API
-    description: >-
-      Java API for building custom Flume sources, channels, sinks, and interceptors. Provides interfaces for developing
-      pluggable data ingestion components.
-    humanURL: https://flume.apache.org/FlumeDeveloperGuide.html
-    tags:
-      - Java
-      - SDK
-      - Extension
-    properties:
-      - type: Documentation
-        url: https://flume.apache.org/FlumeDeveloperGuide.html
-      - type: SDKs
-        url: https://search.maven.org/artifact/org.apache.flume/flume-ng-core
-        title: Java SDK (Maven Central)
+- aid: apache-flume:apache-flume-java-api
+  name: Apache Flume Java API
+  description: >-
+    Java API for building custom Flume sources, channels, sinks, and interceptors. Provides interfaces
+    for developing pluggable data ingestion components.
+  humanURL: https://flume.apache.org/FlumeDeveloperGuide.html
+  tags:
+  - Java
+  - SDK
+  - Extension
+  properties:
+  - type: Documentation
+    url: https://flume.apache.org/FlumeDeveloperGuide.html
+  - type: SDKs
+    url: https://search.maven.org/artifact/org.apache.flume/flume-ng-core
+    title: Java SDK (Maven Central)
+- aid: apache-flume:apache-flume-monitoring-api
+  name: Apache Flume Monitoring API
+  description: The Monitoring API from Apache Flume — 1 operation(s) for monitoring.
+  humanURL: https://flume.apache.org/FlumeUserGuide.html
+  baseURL: http://localhost:41414
+  tags:
+  - Monitoring
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-flume-monitoring-api-openapi.yml
+  - type: Documentation
+    url: https://flume.apache.org/FlumeUserGuide.html
+  - type: JSONSchema
+    url: json-schema/flume-monitoring-agent-metrics-schema.json
+  - type: JSONLD
+    url: json-ld/apache-flume-monitoring-context.jsonld
 common:
   - type: AgenticAccess
     url: agentic-access/apache-flume-agentic-access.yml
