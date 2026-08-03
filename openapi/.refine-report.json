@@ -1,0 +1,14 @@
+{
+  "provider": "apache-flume",
+  "sources": [
+    "apache-flume-monitoring-api-openapi.yml"
+  ],
+  "outputs": [
+    "apache-flume-monitoring-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
