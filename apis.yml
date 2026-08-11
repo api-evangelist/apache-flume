@@ -65,6 +65,15 @@ apis:
   - type: JSONLD
     url: json-ld/apache-flume-monitoring-context.jsonld
 common:
+  - type: IssueTracker
+    url: https://github.com/apache/flume/issues
+  - type: CodeOfConduct
+    url: https://github.com/apache/.github/blob/main/.github/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/apache/logging-flume/blob/trunk/CONTRIBUTING.md
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/apache/flume/blob/trunk/LICENSE
   - type: AgenticAccess
     url: agentic-access/apache-flume-agentic-access.yml
   - type: VulnerabilityDisclosure
