@@ -85,6 +85,8 @@ apis:
   - type: JSONLD
     url: json-ld/apache-flume-monitoring-context.jsonld
 common:
+  - type: Website
+    url: https://www.apache.org/
   - type: IssueTracker
     url: https://github.com/apache/flume/issues
   - type: CodeOfConduct
