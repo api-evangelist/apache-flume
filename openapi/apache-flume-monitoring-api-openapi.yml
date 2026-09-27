@@ -60,6 +60,11 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
+    AgentMetrics:
+      type: object
+      description: All component metrics for a Flume agent indexed by component type and name
+      additionalProperties:
+        $ref: '#/components/schemas/ComponentMetrics'
     ComponentMetrics:
       type: object
       description: Metrics for a specific Flume component (source, channel, or sink)
@@ -140,8 +145,3 @@ components:
           type: string
           description: Number of failed connections (sinks only)
           example: '0'
-    AgentMetrics:
-      type: object
-      description: All component metrics for a Flume agent indexed by component type and name
-      additionalProperties:
-        $ref: '#/components/schemas/ComponentMetrics'

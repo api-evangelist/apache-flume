@@ -41,7 +41,7 @@ tags:
   - Data Collection
   - ETL
   - Log Aggregation
-  - Open-Source
+  - Open Source
   - Streaming
 tags_raw:
   - Apache
@@ -50,6 +50,7 @@ tags_raw:
   - Log Aggregation
   - Open Source
   - Streaming
+  - Open-Source
 created: '2026-03-16'
 modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-flume/refs/heads/main/apis.yml
