@@ -89,6 +89,12 @@ apis:
   - type: JSONLD
     url: json-ld/apache-flume-monitoring-context.jsonld
 common:
+  - type: Plans
+    url: plans/apache-flume-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/apache-flume-rate-limits.yml
+  - type: FinOps
+    url: finops/apache-flume-finops.yml
   - type: Website
     url: https://www.apache.org/
   - type: IssueTracker
