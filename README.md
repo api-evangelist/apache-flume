@@ -1,4 +1,4 @@
-# Apache Flume (apache-flume)
+# Apache Flume
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,84 +66,157 @@
 
 Apache Flume is a distributed, reliable, and available service for efficiently collecting, aggregating, and moving large amounts of log and event data. It provides a simple and flexible architecture based on streaming data flows with pluggable sources, channels, and sinks, plus a REST monitoring API for agent metrics.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/apache-flume/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/apache-flume/refs/heads/main/apis.yml)
+**Areas:** Apache · Data Collection · ETL · Log Aggregation · Open Source · Streaming
 
-## Scope
+## Apache Flume on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Apache Flume is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apache-flume/](https://apis.io/providers/apache-flume/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (2)
 
-- Apache
-- Data Collection
-- ETL
-- Log Aggregation
-- Open Source
-- Streaming
+- [Apache Flume Java API](https://apis.io/apis/apache-flume/apache-flume-java-api/) — Java API for building custom Flume sources, channels, sinks, and interceptors. Provides interfaces for developing pluggable data ingestion components.
+- [Apache Flume Monitoring API](https://apis.io/apis/apache-flume/apache-flume-monitoring-api/) — The Monitoring API from Apache Flume — 1 operation(s) for monitoring.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Apache Flume Monitoring API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for monitoring Apache Flume agents, retrieving component metrics for sources, channels, and sinks, and accessing agent health information.
+- [Apache Flume Agentic Access](https://apis.io/agentic-access/apache-flume/apache-flume-agentic-access/)
 
-- **Human URL:** [https://flume.apache.org/FlumeUserGuide.html](https://flume.apache.org/FlumeUserGuide.html)
-- **Base URL:** `http://localhost:41414`
+#### JSON Schema (2)
 
-#### Tags
+The data models the API reads and writes.
 
-- Monitoring
-- Metrics
-- REST API
+- [AgentMetrics](https://apis.io/schemas/apache-flume/flume-monitoring-agent-metrics/)
+- [ComponentMetrics](https://apis.io/schemas/apache-flume/flume-monitoring-component-metrics/)
 
-#### Properties
+#### JSON Structure (2)
 
-- [Documentation](https://flume.apache.org/FlumeUserGuide.html)
-- [OpenAPI](openapi/apache-flume-monitoring-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/apache-flume-monitoring.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/apache-flume-monitoring.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/flume-monitoring-agent-metrics-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/apache-flume-monitoring-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+Data models expressed in JSON Structure.
 
-### Apache Flume Java API
+- [Flume Monitoring Agent Metrics Structure](https://apis.io/json-structure/apache-flume/flume-monitoring-agent-metrics-structure/)
+- [Flume Monitoring Component Metrics Structure](https://apis.io/json-structure/apache-flume/flume-monitoring-component-metrics-structure/)
 
-Java API for building custom Flume sources, channels, sinks, and interceptors. Provides interfaces for developing pluggable data ingestion components.
+#### JSON-LD (1)
 
-- **Human URL:** [https://flume.apache.org/FlumeDeveloperGuide.html](https://flume.apache.org/FlumeDeveloperGuide.html)
+Linked-data contexts for the provider's vocabulary.
 
-#### Tags
+- [Apache Flume Monitoring Context](https://apis.io/jsonld/apache-flume/apache-flume-monitoring-context/)
 
-- Java
-- SDK
-- Extension
+#### Vocabulary (1)
 
-#### Properties
+The provider's domain terms, defined.
 
-- [Documentation](https://flume.apache.org/FlumeDeveloperGuide.html)
-- [SDK](https://search.maven.org/artifact/org.apache.flume/flume-ng-core)
-- [Postman Collection](collections/apache-flume-monitoring.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/apache-flume-monitoring.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Apache Flume Vocabulary](https://apis.io/vocabularies/apache-flume/apache-flume-vocabulary/)
 
-## Common Properties
+#### Examples (2)
 
+Example requests and responses.
+
+- [Flume Monitoring Agent Metrics Example](https://apis.io/examples/apache-flume/flume-monitoring-agent-metrics-example/)
+- [Flume Monitoring Component Metrics Example](https://apis.io/examples/apache-flume/flume-monitoring-component-metrics-example/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [Apache Flume Monitoring API](https://apis.io/collections/apache-flume/open-apache-flume-monitoring/)
+- [Apache Flume Monitoring API](https://apis.io/collections/apache-flume/open-apache-flume-monitoring-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Apache Flume — jsonschema rules](https://apis.io/rules/apache-flume/apache-flume-jsonschema-spectral-rules/)
+- [Apache Flume API Rules](https://apis.io/rules/apache-flume/apache-flume-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Apache Flume Domain Security](https://apis.io/security/apache-flume/apache-flume-domain-security/)
+- [Apache Flume Vulnerability Disclosure](https://apis.io/security/apache-flume/apache-flume-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Apache Flume Plans Pricing](https://apis.io/plans/apache-flume/apache-flume-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Apache Flume Rate Limits](https://apis.io/rate-limits/apache-flume/apache-flume-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Apache Flume Finops](https://apis.io/finops/apache-flume/apache-flume-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.apache.org/)
 - [Documentation](https://flume.apache.org/documentation.html)
-- [Getting Started](https://flume.apache.org/FlumeUserGuide.html)
-- [GitHub Organization](https://github.com/apache)
-- [GitHub Repository](https://github.com/apache/flume)
-- [Spectral Rules](rules/apache-flume-spectral-rules.yml)
-- [Vocabulary](vocabulary/apache-flume-vocabulary.yaml)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
+- [Getting started](https://flume.apache.org/FlumeUserGuide.html)
+- [GitHub](https://github.com/apache)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** info@apievangelist.com
+**Kin Score 31.4** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 50.1 |
+| Contract governance | 27.3 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 7.9 |
+
+**Agent readiness 23.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apache-flume/](https://apis.io/providers/apache-flume/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apache Flume: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apache-flume/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
